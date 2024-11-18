@@ -129,6 +129,15 @@ header .navbar{
         --dark-color: #333333;
         --purple-color: #9472a7; 
     }
+    .text-box h1{
+        font-size: 19px;
+    }
+    .sub-line{
+        font-size: 20px;
+    }
+    .text-box p{
+        font-size: 15px;
+    }
     .navbar :where(#menu-close,#menu-open){
         font-size: var(--font-size-l);
         display: block;
