@@ -23,8 +23,6 @@ body{
     backdrop-filter: blur(20px);
     box-shadow: 0 0 50px #9393c7;
     color: #fff;
-    
-    
     border-radius: 20px;
 }
 .wrapper:hover{

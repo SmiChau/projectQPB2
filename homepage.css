@@ -6,11 +6,25 @@
     font-optical-sizing: auto;
     
 }
-body{
-    width: 100%;
-    height: 100vh;
-    background:url(homey.jpg) center / cover no-repeat;
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    height: auto; /* Allow the body to grow with content */
+    min-height: 100vh; /* Ensure it takes up at least the viewport height */
+    overflow-x: hidden;
+    overflow-y: auto; /* Prevent horizontal scroll issues */
+    background-image: url('homey.jpg'); /* Replace with your image path */
+    background-size: cover; /* Make the image cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+}
+
 
 :root{
     --border-radius-s:8px;
@@ -47,15 +61,23 @@ nav img{
     padding: 0 20px;
     max-width: var(--site-max-width);
 }
-header{
-    background: #3E4071;
+header {
+    position: fixed; /* Fixes the header to the top */
+    top: 0; /* Aligns it to the top */
+    left: 0;
+    width: 100%; /* Ensures it spans the entire width of the viewport */
+    z-index: 1000; /* Keeps it above other elements */
+    background: #3E4071; /* Solid background for visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
 }
-header .navbar{
+
+header .navbar {
     display: flex;
     padding: 20px;
     align-items: center;
     justify-content: space-between;
 }
+
 
 .navbar .nav-menu{
     display: flex;
@@ -82,42 +104,61 @@ header .navbar{
     display: none;
     color: #3E4071;
 }
-.text-box{
-    width: 90%;
-    color: #D7BA89;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+section{
+    width: 80%;
+    margin: 80px auto;
+}
+/* Updated styling for the home section */
+.home-section {
+    min-height: 100vh;/* Full viewport height */
+    display: flex;
+    padding: 200px 0;
+    background: transparent; /* Optional background overlay */
     text-align: center;
-    
 }
-.text-box h1{
-    font-size: 38px;
+
+/* Updated Text-Box Styling */
+.text-box {
+    color: #3E4071;
+    max-width: 10000px;
+    margin: auto;
 }
-.text-box p{
-    margin: 10px 0 40px;
-    font-size: 18px;
+
+.text-box h1 {
+    font-size: 2rem; /* Adjust font size for responsiveness */
+    margin-bottom: 20px;
+    font-weight: bold;
+    line-height: 1.4;
 }
-.start{
+
+.text-box p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Updated Button Styling */
+.start {
     display: inline-block;
     text-decoration: none;
     border: 2px solid #F4B393;
-    padding: 12px 34px;
-    font-size: 15px;
+    padding: 10px 25px;
+    font-size: 1rem;
     background: transparent;
-    position: relative;
-    cursor: pointer;
-    font-weight: 500;
+    border-radius: 8px; /* Optional rounded corners */
+    font-weight: 600;
     color: #3E4071;
+    transition: all 0.4s ease;
 }
-.start:hover{
-    border:2px solid #3E4071;
+
+.start:hover {
     background: #3E4071;
-    transition: 1s;
     color: #F4B393;
+    border-color: #3E4071;
+    transform: scale(1.1); /* Slight zoom effect */
 }
- 
+
+
 /* Media Query for Smaller Screens */
 @media screen and (max-width: 700px) {
     :root {
@@ -127,7 +168,7 @@ header .navbar{
         --font-size-xxl: 1.6rem;
         --white-color: #ffffff; /* Define white color */
         --dark-color: #333333;
-        --purple-color: #9472a7; 
+        --purple-color: #3686ae; 
     }
     .navbar :where(#menu-close,#menu-open){
         font-size: var(--font-size-l);
@@ -182,7 +223,14 @@ header .navbar{
         font-size: var(--font-size-l);
     }
 }
-#about {
+ 
+.about-section {
+    min-height: 100vh;/* Full viewport height */
+   padding: 150px 0;
+    background: transparent; /* Optional background overlay */
+    text-align: center;
+}
+.about-section .about-container {
     padding: 50px 20px;
     text-align: center;
     background: transparent;
@@ -205,7 +253,14 @@ header .navbar{
     line-height: 1.8;
     margin-bottom: 15px;
 }
-#services {
+.services-section {
+    min-height: 100vh;/* Full viewport height */
+   padding: 150px 0;
+    background: transparent; /* Optional background overlay */
+    text-align: center;
+}
+
+.services-section .services-container {
     padding: 50px 20px;
     background:transparent;
     text-align: center;
@@ -251,16 +306,24 @@ header .navbar{
     transform: translateY(-5px);
     box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
+
 .contact-section {
-    background-color: rgb(159, 156, 156);
-    color: #fff;
-    padding: 50px 20px;
+    min-height: 100vh;/* Full viewport height */
+    padding: 150px 0;
     text-align: center;
+     
 }
 
-.contact-container {
-    max-width: 800px;
+.contact-section .contact-container {
+    background-color: rgb(141, 127, 127);
+    border: 2px solid rgba(255, 255, 255, .2);
+    color: #fff;
+    max-width: 600px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 50px #9393c7;
+    border-radius: 20px;
     margin: 0 auto;
+    justify-content: center;
 }
 
 .contact-section h2 {
@@ -311,10 +374,18 @@ header .navbar{
     padding: 50px 20px;
     text-align: center;
 }
+.login-header {
+    min-height: 20vh;/* Full viewport height */
+    
+    padding: 200px 0;
+    background: transparent; /* Optional background overlay */
+    
+}
 
 .login-container {
     max-width: 800px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .login-header h2 {
@@ -333,7 +404,7 @@ header .navbar{
 
 .btn-login-signup {
     padding: 12px 30px;
-    background-color: #946594;
+    background-color: #b363d1;
     color: #f0f0f1;
     text-decoration: none;
     font-size: 18px;
@@ -348,4 +419,81 @@ header .navbar{
     cursor: pointer;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
 
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+/* Policy Section Styling */
+.policy-section {
+    padding: 50px 20px;
+    background: transparent;
+    color: #333;
+    text-align: center;
+    max-width: 800px;
+    margin: 50px auto;
+    border-radius: 8px;
+    box-shadow: 0 0 50px #9393c7;
+}
+
+.policy-section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.policy-section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.policy-section a {
+    color: #3E4071;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.policy-section a:hover {
+    text-decoration: underline;
+    color: #6c4f7c;
+}
+/* Default nav-link style */
+.nav-link {
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent; /* Invisible border by default */
+}
+
+/* Highlight active menu item */
+.nav-link.highlight {
+    color: #D4AF37; /* Highlighted text color */
+    border-bottom: 2px solid #D4AF37; /* Visible border for active item */
+}
+
+/* Hover effect for nav-links */
+.nav-link:hover {
+    color: #D4AF37;
+    border-bottom: 2px solid #D4AF37;
+}
+
+/* Responsive adjustments */
+@media (max-width: 700px) {
+    .nav-link {
+        font-size: 14px;
+        padding: 8px 10px;
+        border-bottom-width: 1px; /* Thinner border for mobile */
+    }
+}
