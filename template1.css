@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4ecec;
+}
+
+.resume-container {
+    display: flex;
+    width: 210mm ;
+    height: 297mm;
+    margin:2.5% auto;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.left-column {
+    width: 25%;
+    background-color: #cac7c7;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.photo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#photoUpload {
+    display: block;
+    margin: 0 auto;
+}
+
+.contact i {
+    color: #0d325a;
+    margin-right: 6%;
+    font-size: 18px; 
+}
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    text-decoration: underline;
+}
+
+p, ul {
+    font-size: 14px;
+    margin: 6px ;
+    color: #3d3c3c;
+    line-height: 1.5;
+}
+
+.right-column {
+    width: 75%;
+    padding: 25px;
+}
+
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    font-size: 18px;
+    color: #2a2a2a;
+}
+
+.profile i{
+    margin-right: 2%;
+}
+.experience i{
+    margin-right: 2%;
+}
+.education i{
+    margin-right: 2%;
+}
+[contenteditable] {
+    border: none;
+    padding: 5px;
+   
+}
+
+[contenteditable]:focus {
+    outline: none;
+    background-color: rgb(217, 187, 243);
+}
