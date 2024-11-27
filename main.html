@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <nav>
+        <img src="logo.png" alt="">
+    </nav>
+    </header>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <nav>
+                <ul class="nav-menu">
+                    <li class="nav-item"><i class='bx bx-layer'></i><a href="#template-section" id="template-link">Templates</a></li>
+                    <li class="nav-item"><i class='bx bx-user' ></i><a href="#about-section" id="about-link">About</a></li>
+                    <li class="nav-item"><i class='bx bxs-graduation'></i><a href="#education-section" id="education-link">Education</a></li>
+                    <li class="nav-item"><i class='bx bx-briefcase'></i><a href="#experience-section" id="experience-link">Experience</a></li>
+                    <li class="nav-item"><i class='bx bx-rocket'></i><a href="#project-section" id="project-link">Projects</a></li>
+                    <li class="nav-item"><i class='bx bx-bulb' ></i><a href="#skills-section" id="skills-link">Skills</a></li>
+                    <li class="nav-item"><i class='bx bx-trophy' ></i><a href="#achievements-section" id="achievements-link">Achievements</a></li>
+                    <li class="nav-item"><i class='bx bx-certification' ></i><a href="#training-section" id="training-link">Training</a></li>
+                    <li class="nav-item"><i class="fa-solid fa-language"></i><a href="#language-section" id="language-link">Language</a></li>
+                    <li class="nav-item"><i class='bx bx-user-check' ></i><a href="#reference-section" id="reference-link">Reference</a></li>
+                    <li class="nav-item"><i class='bx bx-download'></i><a href="#download-section" id="download-link">Download</a></li>
+                </ul>
+            </nav>
+        </div>
+         
+        
+        <div class="sidebartwo">
+            <!-- Template section -->
+            <section id="template-section">
+                <h3>Select Template</h3>
+                <div class="templates-container">
+                    <!-- Template 1 -->
+                    <div class="template" data-template="cvTemplate11.png">
+                        <img src="cvTemplate1.png" alt="Template 1">
+                        <p>Template 1</p> <!-- Label -->
+                    </div>
+                    <!-- Template 2 -->
+                    <div class="template" data-template="cvTemplate22.png">
+                        <img src="cvTemplate2.png" alt="Template 2">
+                        <p>Template 2</p> <!-- Label -->
+                    </div>
+                    <!-- Template 3 -->
+                    <div class="template" data-template="cvTemplate33.png">
+                        <img src="cvTemplate3.png" alt="Template 3">
+                        <p>Template 3</p> <!-- Label -->
+                    </div>
+                    <!-- Template 4 -->
+                    <div class="template" data-template="cvTemplate44.png">
+                        <img src="cvTemplate4.png" alt="Template 4">
+                        <p>Template 4</p> <!-- Label -->
+                    </div>
+                    <!-- Template 5 -->
+                    <div class="template" data-template="cvTemplate55.png">
+                        <img src="cvTemplate5.png" alt="Template 5">
+                        <p>Template 5</p> <!-- Label -->
+                    </div>
+                    <!-- Template 6 -->
+                    <div class="template" data-template="cvTemplate66.png">
+                        <img src="cvTemplate6.png" alt="Template 6">
+                        <p>Template 6</p> <!-- Label -->
+                    </div>
+                </div>
+                
+            </section>
+            
+
+        <!-- About Section -->
+            <section id="about-section">
+                <h3>About Yourself</h3>
+            
+                <form>
+                    <!-- Profile Photo -->
+                    <div class="profile-photo">
+                        <img src="default-profile.png" alt="Profile Photo" id="profile-img">
+                        <div class="photo-actions">
+                            <input type="file" id="file-input" accept="image/*" style="display: none;">
+                            <button type="button" id="upload-btn">Update Photo</button>
+                            <button type="button" id="delete-btn">Delete</button>
+                        </div>
+                    </div>
+            
+                    <!-- Primary Info -->
+                    <div class="form-group">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" placeholder="Enter first name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name</label>
+                        <input type="text" id="last-name" placeholder="Enter last name">
+                    </div>
+                    <div class="form-group">
+                        <label for="designation">Designation</label>
+                        <input type="text" id="designation" placeholder="Enter designation">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Address</label>
+                        <input type="text" id="address" placeholder="Enter address">
+                    </div>
+                    <div class="form-group">
+                        <label for="city">City</label>
+                        <input type="text" id="city" placeholder="Enter city">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="Enter phone number">
+                    </div>
+                    <div class="form-group">
+                        <label for="summary">Summary</label>
+                        <textarea id="summary" placeholder="How would you describe yourself?"></textarea>
+                    </div>
+            
+                    <!-- Social Links Section -->
+                    <div class="form-group social-links">
+                        <label>Social Links</label>
+                        <div id="social-links-container">
+                            <!-- Template Row for Social Links -->
+                            <div class="social-link-row">
+                                <select class="social-platform">
+                                    <option value="" disabled selected>Select Platform</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="LinkedIn">LinkedIn</option>
+                                    <option value="GitHub">GitHub</option>
+                                    <option value="Threads">Threads</option>
+                                </select>
+                                <input type="url" class="social-link-input" placeholder="Enter link">
+                            </div>
+                        </div>
+                        <button type="button" id="add-social-link">+ Add Social Link</button>
+                    </div>
+            
+                </form>
+            </section>
+            
+       
+        <!-- education-section -->
+        <section id="education-section">
+            <!-- Education Entry -->
+            <h3>Education</h3>
+            <div class="education-entry">
+                
+                <label for="school">School/Institution</label>
+                <input type="text" id="school" placeholder="Enter school name">
+        
+                <label for="degree">Degree</label>
+                <input type="text" id="degree" placeholder="Enter your degree">
+        
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="Enter city name">
+        
+                <div class="date-group">
+                    <div>
+                        <label for="start-date">Start Date</label>
+                        <input type="month" id="start-date">
+                    </div>
+                    <div>
+                        <label for="graduation-date">Graduation Date</label>
+                        <input type="month" id="graduation-date">
+                    </div>
+                </div>
+        
+                
+        
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Talk a little bit about your course of study."></textarea>
+                <button class="delete-education-btn" style="display:none;">Delete</button>
+            </div>
+            <!-- Add More Button -->
+            <button type="button" class="add-education-btn">+ Add Education</button>
+        
+        </section>
+             <!-- Work Experience Section -->
+
+    <section id="experience-section">
+        
+        <h3>Work Experience</h3>
+        <div class="experience-entry">
+            
+            <div class="form-group">
+                <label for="job-title">Job Title</label>
+                <input type="text" id="job-title" placeholder="Enter your job title">
+            </div>
+
+            <div class="form-group">
+                <label for="employer">Employer/Organization</label>
+                <input type="text" id="employer" placeholder="Enter the organization name">
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="Enter the location">
+            </div>
+
+            <div class="date-group">
+                <div>
+                    <label for="start-date">Start Date</label>
+                    <input type="text" id="start-date" placeholder="Month/Year">
+                </div>
+                <div>
+                    <label for="end-date">End Date</label>
+                    <input type="text" id="end-date" placeholder="Month/Year">
+                </div>
+            </div>
+
+           
+
+            <div class="form-group">
+                <label for="description">Description</label>
+                <textarea id="description" placeholder="Mention briefly what sorts of noteworthy tasks you performed at this workplace. Feel free to add your major highlights/achievements as well."></textarea>
+            </div>
+            <button class="delete-experience-btn" style="display:none;">Delete</button>
+        </div>
+        <button type="button" class="add-experience-btn">+ Add Work Experience</button>
+    
+    </section>
+    <!-- project-section -->
+    <section id="project-section">
+        <h3>Projects</h3>
+        <div class="project-entry">
+            <label for="project-title">Project Title</label>
+            <input type="text" id="project-title" name="project-title" placeholder="Enter project title">
+    
+            <label for="project-description">Description</label>
+            <textarea id="project-description" name="project-description" placeholder="Add light to what role you played in the project" rows="4"></textarea>
+    
+            <label for="project-link">Project Link</label>
+            <input type="url" id="project-link" name="project-link" placeholder="https://">
+    
+            <button class="delete-project-btn" style="display:none;">Delete</button>
+        </div>
+    
+        <button class="add-project-btn">+ Add Project</button>
+    </section>
+    <!-- Skills-section -->
+    <section id="skills-section">
+        <h3>Skills</h3>
+      
+        <form>
+            <div id="skill-container">
+                <!-- Initial Skill Row -->
+                <div class="skill-row">
+                    <div class="form-group">
+                        <label for="skill-input">Skill</label>
+                        <input type="text" id="skill-input" class="skill-input" placeholder="Enter skill">
+                    </div>
+                    <div class="form-group">
+                        <label for="skill-level">Level</label>
+                        <div class="skill-level">
+                            <!-- Skill Level Selector -->
+                            <span class="level" data-level="1"></span>
+                            <span class="level" data-level="2"></span>
+                            <span class="level" data-level="3"></span>
+                            <span class="level" data-level="4"></span>
+                            <span class="level" data-level="5"></span>
+                        </div>
+                    </div>
+               </div>
+            </div>
+    
+            <button type="button" id="add-skill-btn">+ Add Skill</button>
+        </form>
+    </section>
+    
+    <!-- Achievement section -->
+    <section id="achievements-section">
+        <h3>Achievements</h3>
+        <div id="achievements-container">
+            <div class="achievement-row">
+                <label for="achievement-title" class="achievement-label">Title</label>
+                <input type="text" class="achievement-title" id="achievement-title" placeholder="Include key achievements like awards, recognitions, or milestones."/>
+                <label for="achievement-description" class="achievement-label">Description</label>
+                <textarea class="achievement-description" id="achievement-description" placeholder="Give a brief insight into how you achieved your milestone. This helps build your credibility!"
+                 rows="4"></textarea>
+            </div>
+        </div>
+        <button type="button" id="add-achievement-btn">+ Add Achievement</button>
+    </section>
+    <section id="training-section">
+    <h3>Training/Certification</h3>
+    <div id="trainings-container">
+        <!-- Initial Training Row -->
+        <div class="training-row">
+            <label for="training-title">Training/Certification</label>
+            <input type="text" id="training-title" class="training-title" placeholder="Enter training/certification title">
+    
+            <label for="training-institution">Institution/Organization</label>
+            <input type="text" id="training-institution" class="training-institution" placeholder="Enter institution/organization name">
+    
+            <label for="training-date">Completion Date</label>
+            <input type="month" id="training-date" class="training-date">
+    
+            <label for="training-description">Description</label>
+            <textarea id="training-description" class="training-description" placeholder="Mention briefly what sorts of noteworthy tasks you performed during this training/certification."></textarea>
+    
+            
+        </div>
+    
+        <!-- Add More Button -->
+        <button type="button" id="add-training-btn" class="add-btn">+ Add Certification</button>
+    </div>
+</section>
+<!-- language-section -->
+<section id="language-section">
+    <h3>Languages</h3>
+  
+    <form>
+        <div id="language-container">
+            <!-- Initial Language Row -->
+            <div class="language-row">
+                <div class="form-group">
+                    <label for="language-input">Language</label>
+                    <input type="text" id="language-input" class="language-input" placeholder="Enter language">
+                </div>
+                <div class="form-group">
+                    <label for="language-level">Level</label>
+                    <div class="language-level">
+                        <!-- Language Level Selector -->
+                        <span class="level" data-level="1"></span>
+                        <span class="level" data-level="2"></span>
+                        <span class="level" data-level="3"></span>
+                        <span class="level" data-level="4"></span>
+                        <span class="level" data-level="5"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button type="button" id="add-language-btn">+ Add Language</button>
+    </form>
+</section>
+<!-- reference section -->
+<section id="reference-section">
+    <h3>Reference</h3>
+        <form>
+        <div id="reference-container">
+            <!-- Initial Reference Row -->
+            <div class="reference-row">
+                <div class="form-group">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" class="first-name" placeholder="Enter First Name">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" class="last-name" placeholder="Enter Last Name">
+                </div>
+                <div class="form-group">
+                    <label for="company">Company</label>
+                    <input type="text" id="company" class="company" placeholder="Enter Company">
+                </div>
+                <div class="form-group">
+                    <label for="designation">Designation</label>
+                    <input type="text" id="designation" class="designation" placeholder="Enter Designation">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" class="phone" placeholder="Enter Phone Number">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" class="email" placeholder="Enter Email">
+                </div>
+
+            </div>
+        </div>
+        <button type="button" id="add-reference-btn">+ Add References</button>
+    </form>
+</section>
+
+    </div>
+    
+
+<div class="sidebar-three">
+    <!-- Sidebar Three (Main Content) -->
+    <h3>Template Preview</h3>
+    <div id="main-content">
+        <!-- Initially, the first template is displayed by default -->
+        <img id="main-preview" src="cvTemplate11.png" alt="Selected Template">
+    </div>
+
+</div>
+</div>
+
+
+    <script src="main.js"></script>
+    <script src="mainabout.js"></script>
+    <script src="maineducation.js"></script>
+    <script src="mainexperience.js"></script>
+    <script src="mainproject.js"></script>
+    <script src="mainskill.js"></script>
+    <script src="mainachievement.js"></script>
+    <script src="maintraining.js"></script>
+    <script src="mainlanguage.js"></script>
+    <script src="mainreference.js"></script>
+    <script src="maincontent.js"></script>
+</body>
+</html>
