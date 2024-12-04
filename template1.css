@@ -7,7 +7,7 @@ body {
 
 .resume-container {
     width: 210mm;
-    height: auto;
+    height: 297mm;
     background-color: white;
     margin: 20px auto;
     box-shadow: rgba(0,0 ,0 ,0.35)0px 5px 15px;
@@ -70,6 +70,8 @@ p, ul {
     padding: 25px;
     background-color: #cac7c7;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    max-height: calc(100%-40mm);
+    overflow-y: auto;
 }
 
 .header h1 {

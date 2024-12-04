@@ -33,8 +33,8 @@ document.getElementById('download').addEventListener('click',()=> {
         margin:0,
         filename: 'template.pdf',
         image: {type: 'jpeg', quality: 0.98},
-        html2canvas: {scale:3},
-        jsPDF: {unit:'in',format:'a4',orientation:'portrait'}
+        html2canvas: {scale: 2 },
+        jsPDF: {unit:'mm',format:'a4',orientation:'portrait'}
     };
     html2pdf().set(options).from(resume).save();
 });

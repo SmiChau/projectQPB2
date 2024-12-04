@@ -4,8 +4,8 @@ body {
     padding: 0;
     background-color: #b3b4ba;
     color: #333;
-  }
-  
+    
+}
   .resume-container{
     width: 210mm;
     height: 297mm;
@@ -63,6 +63,7 @@ body {
   
   .section {
     margin-top: 20px;
+   
   }
   
   .section h2 {
