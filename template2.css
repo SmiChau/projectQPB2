@@ -2,75 +2,150 @@ body {
     font-family: 'Times New Roman', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4ecec;
+    background-color: #b3b4ba;
 }
 .resume-container {
+    width: 210mm;
+    height: auto;
+    background-color: white;
+    margin: 20px auto;
+    box-shadow: rgba(0,0 ,0 ,0.35)0px 5px 15px;
     display: flex;
-    width: 210mm ;
-    height: 297mm;
-    margin:2.5% auto;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    padding: 45px;
-  
+    overflow: hidden;
 }
-.photo img {
-    width: 120px;
-    height: 120px;
+.left-column .photo {
+    margin-bottom: 30px;
+}
+.left-column .photo img{
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
+    margin-left: 30px;
     object-fit: cover;
-    margin-bottom: 20px;
-   
+    /* margin-bottom: px; */
+    border: 8px solid rgb(200, 189, 189);
+   box-sizing: rgba(80, 95, 110, 0.2)0px 8px 24px;
 }
-
+#photoUpload{
+    margin-top: 5px;
+}
+.head{
+    padding: 4px;
+    text-decoration: underline;
+    color: rgb(139, 12, 105);
+    font-size: 30px;
+    margin-top: 15px;
+    text-align: left;
+    margin: 16px 0;
+    margin-bottom: 20px;
+}
+.header h1{
+    line-height: 25px;
+    color: #59142c;
+   margin-top: 0;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
 .header p{
     font-size: 25px;
     padding-left: 25px;
-    margin-bottom: 35px;
+    margin-bottom: 3px;
     color: #283747;
+    margin-top: -4px;
+    letter-spacing: 4px;
+    font-weight: 300;
 }
-.header h1{
-    text-decoration: underline;
-    margin-top: 25px;
-}
-#jobTitle{
-    padding-top: 0;
-    margin-top: 0;
-}
-h3{
-    font-size: 25px;
-    text-decoration: 1.5px underline #045b49;
-    margin-bottom: 6px;
-}
+
 .contact i{
-    margin-left: 20px;
+    margin-left: 9px;
+    color: rgb(36, 36, 104);
+}
+.contact p{
+    display: flex;
+    gap: 18px;
+    margin-bottom:3px;
+    padding: 0;
+    line-height: 4px;
+    
+    letter-spacing:1px ;
+    font-size: 16px;
 }
 .left-column {
-    width: 35%;
-    border-right:2px solid rgb(72, 71, 71);
-    /* padding: 20px; */
-    /* margin-left: 18px; */
+    width: 45%;
+    border-right:3px solid rgb(72, 71, 71);
+     padding: 20px; 
+     margin-left: 19px;
     /* box-shadow: 2px 0 5px rgba(2, 2, 2, 0.1); */
 }
-.ptofil h3{
-    margin-top: 25%;
-    padding-top: 25%;
+.education {
+    margin-bottom: 10px;
+    
+}
+
+.education .course{
+    margin-bottom: 16px;
+    color: #414842;
+    margin-top: 15px;
+    padding-top: 0px;
+}
+.education .education-title{
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 0px ;
+    line-height: 5px;
+    font-size: 25px;
+}
+.education .college-name{
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 20px;
+    
+    
+}
+.education .education-date{
+    font-size: 16px;
+    margin-bottom: 19px;
+    line-height: 4px;
 }
 
 .right-column{
     width: 75%;
-    margin-left: 6%;
+    margin-left: 1%;
+    text-align: justify;
+    padding: 36px;
 }
-.Work h4{
-    font-size: 19px;
-    margin-bottom: 0;
-    padding-bottom: 0;
+.skills li{
+    font-size: 16px;
+    line-height: 18px;
 
 }
+.skills h3{
+    margin-top: 0px;
+    padding-top: 0px;
+    margin-bottom: 3px;
+    padding-bottom: 0px;
+}
+.language h3 {
+    padding-bottom: 0px;
+    margin-bottom: 5px; 
+
+}
+.language li {
+    margin-top: 2px; 
+}
+
+.Work h4{
+    font-size: 25px;
+   line-height: 4px;
+   margin-bottom: 10px;
+   padding-bottom: 4px;
+}
 .Work p{
-   padding: 0;
+   padding: 5px;
    margin:7px;
+   color: #2c2c2e;
+   font-weight: 400;
+   margin-bottom: 4px;
    
 }
 [contenteditable] {
@@ -81,19 +156,65 @@ h3{
 [contenteditable]:focus {
     outline: dotted #c39bd3;
 }
-#rn{
-    font-size: 17px;
-    margin-bottom: 0;
-}
-#rp{
-    margin-top: 0;
-    font-size: 15px;
-    margin-left: 5px;
-    margin-bottom: 3px;
-}
-#rphone,#re{
-    margin: 0;
-    padding: 5px;
-}
 
+.buttons{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
 
+ }
+ .buttons .button{
+    position: relative;
+    color: #fff;
+    padding: 14px 40px;
+    background: linear-gradient(90deg,#450f8b, #ac34e7);
+    border-radius: 45px;
+    margin-top: 36px;
+    font-size: 30px;
+    font-weight: 300;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+ }
+ .buttons .button .overlay{
+    position: absolute;
+    height: 400px ;
+    width: 400px;
+    background: #fff;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: translate(-30%, -50%);
+    opacity: 0.5;
+    animation: blink 0.5s linear infinite;
+ }
+ @keyframes blink{
+    0%{
+        height: 0px;
+        width: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        height: 400px;
+        width: 400px;
+        opacity: 0;
+    }
+ }
+
+/* @media print {
+    body {
+        background-color: white; 
+    }
+
+    .resume-container {
+        margin: 0;
+        box-shadow: none;
+        width: 210mm;
+        height: 297mm;
+    }
+     .hide{
+    display: none ;
+} 
+} */

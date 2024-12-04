@@ -24,3 +24,4 @@ links.forEach((link) => {
 
 // Initialize by showing the first section (optional)
 showSection('template-link'); // Default to "Templates" on page load
+

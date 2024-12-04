@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume Template1</title>
+    <title>Template1</title>
     <link rel="stylesheet" href="template1.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
 </head>
 <body>
     <div class="resume-container">
         <div class="left-column">
             <div class="photo">
-                <input type="file" id="photoUpload" accept="image/*">
-                <img id="profilePhoto" src="placeholder.jpg" alt="Profile Photo">
-            </div>
+                <img src="photo.jpg" alt="Profile Photo" id="profile-photo">
+             </div>
+            <input type="file" id="photoUpload" accept="image/*" class="hide">
             <div class="contact">
                 <h3>Contact</h3>
                 <p contenteditable="true" id="phone"><i class="fa fa-phone-alt"></i> 9808000000</p>
@@ -82,7 +83,14 @@
             </div>
         </div>
     </div>
-    <script src="template1.js"></script>
+    <div class="buttons">
+         <a href="#" id="download" class="button">Download CV
+             <!-- <span class="overlay"></span> -->
+            </a>
+         
+      </div>
+    <script src="template3.js"></script>
+    <script src="download.js"></script>
 </body>
 </html>
 

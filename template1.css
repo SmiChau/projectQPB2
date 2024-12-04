@@ -2,43 +2,46 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4ecec;
+    background-color: #b3b4ba;
 }
 
 .resume-container {
+    width: 210mm;
+    height: auto;
+    background-color: white;
+    margin: 20px auto;
+    box-shadow: rgba(0,0 ,0 ,0.35)0px 5px 15px;
     display: flex;
-    width: 210mm ;
-    height: 297mm;
-    margin:2.5% auto;
-    background: #ffffff;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
     overflow: hidden;
 }
 
 .left-column {
     width: 25%;
-    background-color: #cac7c7;
+   
     padding: 20px;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    
+    
 }
 
 .photo {
     text-align: center;
     margin-bottom: 30px;
+
 }
 
 .photo img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
+    margin-bottom: 1px;
+    border:3px #2a2a2a solid;
 }
 
 #photoUpload {
-    display: block;
+    /* display: block; */
     margin: 0 auto;
+    padding-top: 0px;
 }
 
 .contact i {
@@ -47,14 +50,16 @@ body {
     font-size: 18px; 
 }
 h3 {
-    font-size: 18px;
+    font-size: 30px;
     margin-bottom: 10px;
     color: #333;
     text-decoration: underline;
 }
-
+.skills #skillsList{
+    margin-left: 9px;
+}
 p, ul {
-    font-size: 14px;
+    font-size: 16px;
     margin: 6px ;
     color: #3d3c3c;
     line-height: 1.5;
@@ -63,27 +68,26 @@ p, ul {
 .right-column {
     width: 75%;
     padding: 25px;
+    background-color: #cac7c7;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .header h1 {
-    font-size: 28px;
+    font-size: 35px;
     margin-bottom: 5px;
 }
 
 .header p {
     font-size: 18px;
     color: #2a2a2a;
+    letter-spacing: 2px;
+  
 }
 
-.profile i{
+.profile i .education i .experience i{
     margin-right: 2%;
 }
-.experience i{
-    margin-right: 2%;
-}
-.education i{
-    margin-right: 2%;
-}
+
 [contenteditable] {
     border: none;
     padding: 5px;
@@ -92,5 +96,54 @@ p, ul {
 
 [contenteditable]:focus {
     outline: none;
-    background-color: rgb(217, 187, 243);
+    background-color: rgb(225, 203, 243);
 }
+/* .hide{
+    display: none ;
+} */
+ .buttons{
+    height: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+
+ }
+ .buttons .button{
+    position: relative;
+    color: #fff;
+    padding: 14px 40px;
+    background: linear-gradient(90deg,#450f8b, #ac34e7);
+    border-radius: 45px;
+    margin-top: 36px;
+    font-size: 30px;
+    font-weight: 300;
+    text-decoration: none;
+    overflow: hidden;
+    box-shadow: 3px 5px rgba(0, 0, 0, 0.1);
+ }
+ .buttons .button .overlay{
+    position: absolute;
+    height: 400px ;
+    width: 400px;
+    background: #fff;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: translate(-20%, -50%);
+    opacity: 1;
+    animation: blink 0.5s linear infinite;
+ }
+ 
+ @keyframes blink{
+    0%{
+        height: 0px;
+        width: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        height: 400px;
+        width: 400px;
+        opacity: 0;
+    }
+ }
