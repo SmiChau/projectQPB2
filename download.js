@@ -27,8 +27,12 @@ for(var i=0; i<buttons.length; i++){
 
 // download
 document.getElementById('download').addEventListener('click',()=> {
-    const resume= document.querySelector('.resume-container');
+    const photoUpload = document.getElementById("photoUpload");
+    const photoUploadlabel= document.getElementById('photoUploadlabel');
+    photoUpload.style.display='none';
+    photoUploadlabel.style.display='none';
 
+    const resume= document.querySelector('.resume-container');
     const options={
         margin:0,
         filename: 'template.pdf',
@@ -36,5 +40,8 @@ document.getElementById('download').addEventListener('click',()=> {
         html2canvas: {scale: 2 },
         jsPDF: {unit:'mm',format:'a4',orientation:'portrait'}
     };
-    html2pdf().set(options).from(resume).save();
+    html2pdf().set(options).from(resume).save().then(()=>{
+        // photoUpload.style.display='block';
+        photoUploadlabel.style.display='block';
+    });
 });

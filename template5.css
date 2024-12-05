@@ -14,7 +14,7 @@ body {
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    
+    box-sizing: border-box;
   }
   
   .header {
@@ -93,6 +93,15 @@ body {
     width: 48%;
     margin-bottom: 5px;
   }
+  .hide{
+    display: none ;
+}
+#photoUploadlabel{
+    cursor: pointer;
+    font-size: 16px;
+    color: #a41a1a;
+    
+}
   
   .buttons{
     height: 100%;

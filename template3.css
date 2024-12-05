@@ -9,17 +9,19 @@ body{
 }
 .resume-container{
     width: 210mm;
-    height: auto;
+    height: 297mm;
     background-color: white;
     margin: 20px auto;
     box-shadow: rgba(0,0 ,0 ,0.35)0px 5px 15px;
     display: flex;
+    box-sizing: border-box;
 }
 .resume-container .left-column{
     width: 40%;
     height: 100%;
     background-color: #f4f4f4;
-    padding: 26px;
+    padding: 24px;
+    
 }
 .left-column .photo {
     margin-bottom: 30px;
@@ -186,10 +188,15 @@ body{
     text-align: left;
 }
 
-/* .hide{
+.hide{
     display: none ;
-} */
-
+}
+#photoUploadlabel{
+    cursor: pointer;
+    font-size: 16px;
+    color: #a41a1a;
+    
+}
 .buttons{
     height: 100%;
     display:flex;
